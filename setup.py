@@ -17,6 +17,6 @@ setup(
     classifiers=[
         "Topic :: Scientific/Engineering :: Bio-Informatics"
     ],
-    package_data=["VERSION"],
+    package_data={'melting': ["VERSION"]},
     entry_points={'console_scripts': ['Tm = melting:main']}
 )
