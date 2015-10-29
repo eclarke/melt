@@ -21,7 +21,7 @@ from __future__ import division
 from math import sqrt, log
 import argparse
 import sys
-import pkg_resources
+from pkg_resources import resource_stream
 
 def _is_sym(seq):
     """Returns True if s is symmetric (same as rev. complement)"""
@@ -214,6 +214,12 @@ def main(argv=sys.argv[1:]):
         type=float,
         default=10.0,
         help="Nucleotide triphosphate concentration (mM)"
+    )
+
+    parser.add_argument(
+        "--version",
+        action="version",
+        version=resource_stream("melting", "VERSION").read().strip()
     )
 
     args = parser.parse_args(argv)
