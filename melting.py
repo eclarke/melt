@@ -69,7 +69,7 @@ def _tercorr(st):
     return _dh, _ds
 
 
-def temp(s, DNA_c=5000.0, Na_c=10.0, Mg_c=20.0, dNTPs_c=10.0, correction=True):
+def temp(s, DNA_c=5000.0, Na_c=10.0, Mg_c=20.0, dNTPs_c=10.0, uncorrected=False):
     '''
     Returns the DNA/DNA melting temp using nearest-neighbor thermodynamics.
 
@@ -129,7 +129,7 @@ def temp(s, DNA_c=5000.0, Na_c=10.0, Mg_c=20.0, dNTPs_c=10.0, correction=True):
     # Melting temperature
     tm = (1000 * dh) / (ds + (R * log(k)))
 
-    if not correction:
+    if uncorrected:
         return tm - 273.15
 
     MNa = Na_c * 1e-3
@@ -172,13 +172,6 @@ def nucleotide_sequence(seq):
     return seq
 
 
-# @click.command()
-# @click.argument("sequence")
-# @click.option("-c", "--correction", type=bool, default=True)
-# @click.option("--dna", default=5000.0)
-# @click.option("--na", default=10.0)
-# @click.option("--mg", default=20.0)
-# @click.option("--dntp", default=10.0)
 def main(argv=sys.argv[1:]):
     parser = argparse.ArgumentParser('Tm', description="Calculate nucleotide melting temps")
 
@@ -189,38 +182,38 @@ def main(argv=sys.argv[1:]):
     )
 
     parser.add_argument(
-        "-c", "--corrected",
-        type=bool,
-        default=True,
-        help="Use monovalent/divalent cation corrections"
+        "--uncorrected",
+        action='store_true',
+        default=False,
+        help="Do not use monovalent/divalent cation corrections"
     )
 
     parser.add_argument(
         "-d", "--dna",
         type=float,
         default=5000.0,
-        help="DNA concentration"
+        help="DNA concentration (nM)"
     )
 
     parser.add_argument(
         "--na",
         type=float,
         default=10.0,
-        help="Na+ concentration"
+        help="Na+ concentration (mM)"
     )
 
     parser.add_argument(
         "--mg",
         type=float,
         default=20.0,
-        help="Mg++ concentration"
+        help="Mg++ concentration (mM)"
     )
 
     parser.add_argument(
         "--dntp",
         type=float,
         default=10.0,
-        help="Nucleotide triphosphate concentration"
+        help="Nucleotide triphosphate concentration (mM)"
     )
 
     args = parser.parse_args(argv)
@@ -231,10 +224,7 @@ def main(argv=sys.argv[1:]):
         Na_c=args.na,
         Mg_c=args.mg,
         dNTPs_c=args.dntp,
-        correction=args.corrected
+        uncorrected=args.uncorrected
     )
 
     print('{:03.1f}'.format(Tm))
-
-if __name__ == "__main__":
-    main()
