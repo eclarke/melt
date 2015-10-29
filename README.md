@@ -1,2 +1,4 @@
-# melt
-Standalone nucleotide sequence melt temp calculator for Python
+# melting.py
+Nucleotide sequence melt temp calculator for Python
+
+
