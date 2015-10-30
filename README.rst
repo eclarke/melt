@@ -21,8 +21,8 @@ Installation
 
 	$ pip install melt
 
-
-## Usage
+Usage
+======
 
 From the command line:
 
@@ -44,8 +44,8 @@ As a library:
 	>>> melting.temp("ATGCATGC", DNA_c=200, Na_c=50, Mg_c=3, dNTPs_c=0.8)
 	26.438734864285152
 
-
-## Acknowledgements
+Acknowledgements
+================
 
 This code is largely built on existing code from:
 
