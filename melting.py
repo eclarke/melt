@@ -21,12 +21,7 @@ from __future__ import division
 from math import sqrt, log
 import argparse
 import sys
-from pkg_resources import get_distribution, DistributionNotFound
-
-try:
-    __version__ = get_distribution('melting').version
-except DistributionNotFound:
-    __version__ = 'not installed (install using pip or setuptools)'
+from pkg_resources import get_distribution
 
 def _is_sym(seq):
     """Returns True if s is symmetric (same as rev. complement)"""
@@ -224,7 +219,7 @@ def main(argv=sys.argv[1:]):
     parser.add_argument(
         "--version",
         action="version",
-        version=__version__
+        version=get_distribution('melting').version
     )
 
     args = parser.parse_args(argv)
