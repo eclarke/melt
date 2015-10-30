@@ -7,14 +7,24 @@ Melt
 .. image:: https://badge.fury.io/py/melt.svg
     :target: https://badge.fury.io/py/melt
 
-A nucleotide sequence melt temp calculator for Python. 
+A nucleotide sequence melt temp calculator for Python.
 
 Features:
 ==========
 
 - Usually within a few tenths of a degree C match to IDT's `OligoAnalyzer <https://www.idtdna.com/calc/analyzer>`_
 - Mono- and divalent cation corrections (from https://www.idtdna.com/Calc/Analyzer/Home/Definitions#MeltTemp)
-- Accurate nucleotide pair coefficents from Allawi and SantaLucia (1997).
+- Accurate nucleotide pair coefficents from Allawi and SantaLucia (1997)
+
+Limitations:
+============
+
+- Does not handle mismatches or dangling ends ()
+- Does not handle ambiguous bases
+- Does not handle RNA or DNA/RNA hybridization
+
+If you need these features, use BioPython's `MeltingTemp <http://biopython.org/DIST/docs/api/Bio.SeqUtils.MeltingTemp-module.html>`_ module.
+ 
 
 Installation
 =============
