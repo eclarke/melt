@@ -10,7 +10,7 @@ A nucleotide sequence melt temp calculator for Python.
 Features:
 ==========
 
-- Usually within a few tenths of a degree C match to IDT's [OligoAnalyzer](https://www.idtdna.com/calc/analyzer)
+- Usually within a few tenths of a degree C match to IDT's `OligoAnalyzer <https://www.idtdna.com/calc/analyzer>`
 - Mono- and divalent cation corrections (from https://www.idtdna.com/Calc/Analyzer/Home/Definitions#MeltTemp)
 - Accurate nucleotide pair coefficents from Allawi and SantaLucia (1997).
 
@@ -52,4 +52,4 @@ This code is largely built on existing code from:
 - Greg Singer (singerg@tcd.ie)
 - Nicolas Le Novere (lenov@ebi.ac.uk) 
 
-Salt concentration equations adapted from IDT, with work from [Erik Clarke](https://github.com/eclarke), Sesh Sundararaman, and [Calvin Morrison](https://github.com/mutantturkey).
+Salt concentration equations adapted from IDT, with work from Erik Clarke, Sesh Sundararaman, and Calvin Morrison.
