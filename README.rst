@@ -48,6 +48,7 @@ As a library:
 ## Acknowledgements
 
 This code is largely built on existing code from:
+
 - Sebastian Bassi (sbassi@genesdigitales.com)
 - Greg Singer (singerg@tcd.ie)
 - Nicolas Le Novere (lenov@ebi.ac.uk) 
