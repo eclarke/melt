@@ -1,10 +1,9 @@
 from setuptools import setup
 
-with open("VERSION") as version_file:
-    VERSION = version_file.read().strip()
+VERSION = open('VERSION').read().strip()
 
 setup(
-    name="melt",
+    name="melting",
     py_modules=['melting'],
     version=VERSION,
     author='Erik Clarke',
@@ -17,6 +16,5 @@ setup(
     classifiers=[
         "Topic :: Scientific/Engineering :: Bio-Informatics"
     ],
-    package_data={'melting': ["VERSION"]},
     entry_points={'console_scripts': ['Tm = melting:main']}
 )
