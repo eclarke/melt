@@ -19,7 +19,7 @@ Features:
 Limitations:
 ============
 
-- Does not handle mismatches or dangling ends ()
+- Does not handle mismatches or dangling ends
 - Does not handle ambiguous bases
 - Does not handle RNA or DNA/RNA hybridization
 
