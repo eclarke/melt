@@ -238,4 +238,4 @@ def main(argv=sys.argv[1:]):
         uncorrected=args.uncorrected
     )
 
-    print('{:03.1f}'.format(Tm))
+    print('{0:03.1f}'.format(Tm))
