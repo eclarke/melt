@@ -219,7 +219,7 @@ def main(argv=sys.argv[1:]):
     parser.add_argument(
         "--version",
         action="version",
-        version=get_distribution('melting').version
+        version=get_distribution('melt').version
     )
 
     args = parser.parse_args(argv)
