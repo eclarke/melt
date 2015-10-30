@@ -1,4 +1,4 @@
-melting.py
+Melt
 ------------
 .. image:: https://travis-ci.org/eclarke/melt.svg?branch=master
     :target: https://travis-ci.org/eclarke/melt
@@ -53,4 +53,4 @@ This code is largely built on existing code from:
 - Greg Singer (singerg@tcd.ie)
 - Nicolas Le Novere (lenov@ebi.ac.uk) 
 
-Salt concentration equations adapted from IDT, with work from Erik Clarke, Sesh Sundararaman, and Calvin Morrison.
+Salt concentration equations adapted from IDT, with work from `Erik Clarke <https://github.com/eclarke>`_, `Sesh Sundararaman <https://github.com/sesh-sas>`_, and `Calvin Morrison <https://github.com/mutantturkey>`_.
