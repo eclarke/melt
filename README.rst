@@ -4,6 +4,8 @@ Melt
     :target: https://travis-ci.org/eclarke/melt
 .. image:: https://coveralls.io/repos/eclarke/melt/badge.svg?branch=master&service=github
 	:target: https://coveralls.io/github/eclarke/melt?branch=master
+.. image:: https://badge.fury.io/py/melt.svg
+    :target: https://badge.fury.io/py/melt
 
 A nucleotide sequence melt temp calculator for Python. 
 
