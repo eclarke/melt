@@ -37,7 +37,7 @@ def _is_sym(seq):
 def _overcount(st, p):
     ocu = 0
     x = 0
-    while 1:
+    while True:
         try:
             i = st.index(p, x)
         except ValueError:
